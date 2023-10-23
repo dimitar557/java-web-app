@@ -1,7 +1,7 @@
 pipeline {
-  agent { label 'linux' }
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
+  agent any
+  tools {
+      maven "Maven-3.8.4"
   }
   stages {
     stage('Scan') {
